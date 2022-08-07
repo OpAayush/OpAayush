@@ -1,8 +1,6 @@
 <h1 align="center">Hi 👋, I'm Aayu5h</h1>
 <h3 align="center">A Programmer from India</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=opaayush" alt="opaayush" /></a> </p>
-
 - 🔭 I’m Currently Working On a **Website**
 
 - 🌱 I’m Currently Learning **Python**
