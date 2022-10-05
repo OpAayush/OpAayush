@@ -9,7 +9,7 @@
 
 - 🤝 I’m Looking for Help in **Python**
 
-- 👨‍💻 My Portfolio Website [https://opaayush.is-a.dev](https://opaayush.is-a.dev)
+- 👨‍💻 My Portfolio Website [https://aayush.is-a.dev](https://opaayush.is-a.dev)
 
 - 📝 My Company Website [https://spicydevs.js.cool](https://spicydevs.js.cool)
 
@@ -17,7 +17,7 @@
 
 - 📫 How to reach me **aayushmagrawal@gmail.com**
 
-- 📄 All of My Projects are Available at [https://opaayush.is-a.dev/projects](https://opaayush.is-a.dev/projects)
+- 📄 All of My Projects are Available at [https://aayush.is-a.dev/projects](https://opaayush.is-a.dev/projects)
 
 - ⚡ Fun fact **I have an Experience of 5 Years**
 
