@@ -9,9 +9,9 @@
 
 - 🤝 I’m Looking for Help in **Python**
 
-- 👨‍💻 My Portfolio Website [https://aayush.is-a.dev](https://opaayush.is-a.dev)
+- 👨‍💻 My Portfolio Website [aayush.is-a.dev](https://opaayush.is-a.dev)
 
-- 📝 My Company Website [https://spicydevs.js.cool](https://spicydevs.js.cool)
+- 📝 My Company Website [spicydevs.js.cool](https://spicydevs.js.cool)
 
 - 💬 You can Ask Help for **Javascript, Html, CSS**
 
