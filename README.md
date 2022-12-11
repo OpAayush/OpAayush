@@ -11,7 +11,7 @@
 
 - 👨‍💻 My Portfolio Website [https://aayush.is-a.dev](https://opaayush.is-a.dev)
 
-- 📝 My Company Website [https://spicydevs.js.cool](https://spicydevs.js.cool)
+- 🔥 SpicyDevs [https://spicydevs.me](https://spicydevs.me)
 
 - 💬 You can Ask Help for **Javascript, Html, CSS**
 
