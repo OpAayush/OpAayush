@@ -17,7 +17,7 @@
 
 - 📫 How to reach me **aayushmagrawal@gmail.com**
 
-- 📄 All of My Projects are Available at [https://aayush.is-a.dev/projects](https://opaayush.is-a.dev/projects)
+- 📄 All of My Projects are Available at [https://spicydevs.me/codes](https://spicydevs.me/codes)
 
 - ⚡ Fun fact **I have an Experience of 5 Years**
 
