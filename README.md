@@ -14,9 +14,7 @@
 - 🔥 SpicyDevs [https://spicydevs.me](https://spicydevs.me)
 
 - 💬 You can Ask Help for **Javascript, Html, CSS**
-
-- 📫 How to reach me **aayushmagrawal@gmail.com**
-
+- 
 - 📄 All of My Projects are Available at [https://spicydevs.me/codes](https://spicydevs.me/codes)
 
 - ⚡ Fun fact **I have an Experience of 5 Years**
