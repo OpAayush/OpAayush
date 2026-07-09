@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280">
+  <defs>
+    <style>
+      /* Text Reveal */
+      @keyframes revealRight {
+        0% { opacity: 0; transform: translateX(-20px); }
+        100% { opacity: 1; transform: translateX(0); }
+      }
+
+      /* Pulse glow */
+      @keyframes pulseGlow {
+        0% { opacity: 0.2; }
+        50% { opacity: 1; }
+        100% { opacity: 0.2; }
+      }
+
+      /* Deep Water Particles (Marine Snow) */
+      @keyframes marineSnow1 {
+        0% { transform: translateY(0) translateX(0); opacity: 0; }
+        20% { opacity: 0.5; }
+        80% { opacity: 0.5; }
+        100% { transform: translateY(-150px) translateX(-20px); opacity: 0; }
+      }
+      @keyframes marineSnow2 {
+        0% { transform: translateY(0) translateX(0); opacity: 0; }
+        20% { opacity: 0.3; }
+        80% { opacity: 0.3; }
+        100% { transform: translateY(-100px) translateX(15px); opacity: 0; }
+      }
+
+      /* Mechanical Submarine Dynamics */
+      @keyframes subBob {
+        0%, 100% { transform: translateY(0px) rotate(0.5deg); }
+        50% { transform: translateY(-12px) rotate(-1.5deg); }
+      }
+      @keyframes propellerSpin {
+        0% { transform: scaleY(1); }
+        50% { transform: scaleY(0.1); }
+        100% { transform: scaleY(1); }
+      }
+
+      /* Particle Physics (Bubbles) */
+      @keyframes bubbleRise {
+        0% { transform: translateY(0) translateX(0) scale(0.5); opacity: 0; }
+        20% { opacity: 0.8; }
+        100% { transform: translateY(-120px) translateX(-15px) scale(1.5); opacity: 0; }
+      }
+
+      /* Deep Fauna Dynamics */
+      @keyframes swimLeft {
+        0% { transform: translateX(1100px) translateY(0px); }
+        50% { transform: translateX(450px) translateY(15px); }
+        100% { transform: translateX(-100px) translateY(-10px); }
+      }
+      @keyframes swimRight {
+        0% { transform: translateX(-100px) translateY(0px); }
+        50% { transform: translateX(500px) translateY(-25px); }
+        100% { transform: translateX(1100px) translateY(10px); }
+      }
+
+      /* Independent Word Buoyancy */
+      @keyframes floatHeadline {
+        0%, 100% { transform: translateY(0px) rotate(0.3deg); }
+        50% { transform: translateY(-6px) rotate(-0.8deg); }
+      }
+      @keyframes float1 {
+        0%, 100% { transform: translateY(0px) rotate(1deg); }
+        50% { transform: translateY(-6px) rotate(-1.5deg); }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translateY(-2px) rotate(-1deg); }
+        50% { transform: translateY(-9px) rotate(1.5deg); }
+      }
+      @keyframes float3 {
+        0%, 100% { transform: translateY(-5px) rotate(1.5deg); }
+        50% { transform: translateY(3px) rotate(-1deg); }
+      }
+
+      /* Beam focus synced with subBob (6s cycle) */
+      @keyframes beamFocusTop {
+        0%, 100% { opacity: 0.12; }
+        30% { opacity: 0.12; }
+        50% { opacity: 0.95; }
+        70% { opacity: 0.12; }
+      }
+      @keyframes beamFocusBottom {
+        0%, 100% { opacity: 0.95; }
+        20% { opacity: 0.12; }
+        80% { opacity: 0.12; }
+      }
+
+      .text-reveal { animation: revealRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.25s; }
+      .delay-3 { animation-delay: 0.4s; }
+    </style>
+
+    <linearGradient id="abyssGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+
+    <linearGradient id="beamOuter" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#fef08a" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0.01" />
+    </linearGradient>
+
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+
+    <linearGradient id="darkRight" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="40%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.88" />
+    </linearGradient>
+
+    <linearGradient id="darkBottom" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="60%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.88" />
+    </linearGradient>
+
+    <linearGradient id="posteriumGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="subBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#a16207" />
+    </linearGradient>
+
+    <g id="fish">
+      <path d="M 15 0 Q 5 -6 -5 0 Q 5 6 15 0 Z" />
+      <polygon points="15,0 22,-5 20,0 22,5" />
+    </g>
+
+    <g id="anglerfish">
+      <path d="M -10 -5 Q -15 -18 -25 -8" fill="none" stroke="#64748b" stroke-width="1.5" />
+      <circle cx="-25" cy="-8" r="3" fill="#fef08a" />
+      <circle cx="-25" cy="-8" r="6" fill="#fef08a" opacity="0.3" />
+      <path d="M 15 0 C 15 -12, -5 -15, -15 0 C -5 15, 15 12, 15 0 Z" fill="currentColor" />
+      <polygon points="15,0 22,-6 20,0 22,6" fill="currentColor" />
+      <path d="M -15 0 C -8 3, -5 3, 0 0" fill="none" stroke="#000000" stroke-width="1.5" />
+    </g>
+  </defs>
+
+  <rect width="1000" height="280" fill="url(#abyssGrad)" />
+
+  <rect width="1000" height="280" fill="url(#darkRight)" />
+  <rect width="1000" height="280" fill="url(#darkBottom)" />
+
+  <g fill="#f8fafc">
+    <circle cx="150" cy="280" r="1.5" style="animation: marineSnow1 12s linear infinite;" />
+    <circle cx="450" cy="250" r="1" style="animation: marineSnow2 15s linear infinite 2s;" />
+    <circle cx="850" cy="300" r="2" style="animation: marineSnow1 10s linear infinite 5s;" />
+    <circle cx="720" cy="260" r="1.5" style="animation: marineSnow2 14s linear infinite 1s;" />
+    <circle cx="300" cy="290" r="1" style="animation: marineSnow1 18s linear infinite 3s;" />
+    <circle cx="600" cy="240" r="2" style="animation: marineSnow2 11s linear infinite 7s;" />
+  </g>
+
+  <g fill="#fef08a" opacity="0.35" style="mix-blend-mode: screen;">
+    <circle cx="300" cy="142" r="1" style="animation: marineSnow1 8s linear infinite;" />
+    <circle cx="400" cy="168" r="1.5" style="animation: marineSnow2 10s linear infinite 1s;" />
+    <circle cx="500" cy="136" r="0.8" style="animation: marineSnow1 12s linear infinite 3s;" />
+    <circle cx="600" cy="175" r="1.2" style="animation: marineSnow2 9s linear infinite 2s;" />
+    <circle cx="700" cy="124" r="0.6" style="animation: marineSnow1 7s linear infinite 4s;" />
+    <circle cx="750" cy="186" r="1" style="animation: marineSnow2 11s linear infinite 0.5s;" />
+    <circle cx="350" cy="112" r="0.7" style="animation: marineSnow1 14s linear infinite 5s;" />
+    <circle cx="550" cy="192" r="0.9" style="animation: marineSnow2 13s linear infinite 3.5s;" />
+  </g>
+
+  <g fill="#f8fafc" opacity="0.1">
+    <g style="animation: swimLeft 28s linear infinite;">
+      <g transform="translate(0, 180)">
+        <use href="#fish" />
+      </g>
+    </g>
+  </g>
+
+  <g fill="#f8fafc" opacity="0.15">
+    <g style="animation: swimRight 35s linear infinite 5s;">
+      <g transform="translate(0, 60) scale(-0.8, 0.8)">
+        <use href="#fish" />
+      </g>
+    </g>
+  </g>
+
+  <g fill="#f8fafc" opacity="0.25">
+    <g style="animation: swimLeft 42s linear infinite 12s;">
+      <g transform="translate(0, 220) scale(1.1, 1.1)">
+        <use href="#anglerfish" />
+      </g>
+    </g>
+  </g>
+  <g transform="translate(120, 130)">
+    <g style="animation: subBob 6s ease-in-out infinite;">
+
+      <polygon points="100,20 950,-140 950,160" fill="url(#beamOuter)" filter="url(#softBlur)"
+        style="mix-blend-mode: screen;" />
+
+      <rect x="0" y="0" width="120" height="40" rx="20" fill="url(#subBody)" />
+
+      <path d="M 30 0 Q 40 -20 60 -20 L 80 0 Z" fill="#ca8a04" />
+
+      <path d="M 65 -20 V -35 H 75 V -30 H 70 V -20 Z" fill="#475569" />
+
+      <path d="M 10 20 L -15 0 V 40 Z" fill="#ca8a04" />
+      <path d="M 15 20 L -5 10 V 30 Z" fill="#a16207" />
+
+      <circle cx="95" cy="20" r="12" fill="#000000" stroke="#fef08a" stroke-width="2.5" />
+      <circle cx="92" cy="16" r="4" fill="#f8fafc" opacity="0.7" />
+
+      <circle cx="55" cy="20" r="6" fill="#000000" stroke="#fef08a" stroke-width="1.5" />
+      <circle cx="35" cy="20" r="6" fill="#000000" stroke="#fef08a" stroke-width="1.5" />
+
+      <g transform="translate(-20, 20)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#334155" rx="1" />
+        <rect x="-2" y="-14" width="4" height="28" fill="#94a3b8" rx="1.5"
+          style="animation: propellerSpin 0.3s linear infinite; transform-origin: 0px 0px;" />
+      </g>
+
+      <g fill="none" stroke="#f8fafc" stroke-width="1.5" opacity="0.6">
+        <circle cx="-25" cy="15" r="3" style="animation: bubbleRise 3s ease-in infinite;" />
+        <circle cx="-35" cy="25" r="4" style="animation: bubbleRise 4.5s ease-in infinite 1s;" />
+        <circle cx="-20" cy="10" r="2" style="animation: bubbleRise 3.5s ease-in infinite 2.2s;" />
+      </g>
+
+    </g>
+  </g>
+
+  <!-- Text: posterium with left-to-right white glow -->
+  <g transform="translate(560, 40)">
+      <g style="animation: beamFocusTop 6s ease-in-out infinite;">
+        <g style="animation: floatHeadline 5s ease-in-out infinite;">
+          <text x="4" y="45"
+            font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14"
+            font-weight="700" fill="#f8fafc" opacity="0.9" letter-spacing="4" text-transform="uppercase"
+            class="text-reveal delay-1">
+            now building
+          </text>
+        </g>
+      </g>
+    <g style="animation: floatHeadline 5s ease-in-out infinite;">
+      <text x="0" y="115"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        font-size="76" font-weight="900" fill="url(#posteriumGrad)" letter-spacing="-3"
+        class="text-reveal delay-2">posterium.</text>
+    </g>
+  </g>
+  <g transform="translate(564, 200)">
+      <g style="animation: beamFocusBottom 6s ease-in infinite 0s;">
+        <g transform="translate(0, 0)">
+          <g style="animation: float1 4s ease-in-out infinite;">
+            <text x="0" y="0"
+              font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+              font-size="14" font-weight="700" fill="#f8fafc" letter-spacing="2"
+              text-transform="uppercase" class="text-reveal delay-3">CREATE.</text>
+          </g>
+        </g>
+      </g>
+      <g style="animation: beamFocusBottom 6s ease-in infinite 0.2s;">
+        <g transform="translate(95, 0)">
+          <g style="animation: float2 5.2s ease-in-out infinite 0.3s;">
+            <text x="0" y="0"
+              font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+              font-size="14" font-weight="700" fill="#f8fafc" letter-spacing="2"
+              text-transform="uppercase" class="text-reveal delay-3">CUSTOMIZE.</text>
+          </g>
+        </g>
+      </g>
+      <g style="animation: beamFocusBottom 6s ease-in infinite 0.4s;">
+        <g transform="translate(215, 0)">
+          <g style="animation: float3 4.5s ease-in-out infinite 0.7s;">
+            <text x="0" y="0"
+              font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+              font-size="14" font-weight="700" fill="#f8fafc" letter-spacing="2"
+              text-transform="uppercase" class="text-reveal delay-3">CURATE.</text>
+          </g>
+        </g>
+      </g>
+  </g>
+
+  <rect x="0" y="240" width="1000" height="40" fill="#000000" opacity="0.6" />
+  <rect width="1000" height="280" fill="none" stroke="#1e293b" stroke-width="2" />
+</svg>

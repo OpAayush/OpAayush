@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280">
+  <defs>
+    <style>
+      /* Text Reveal */
+      @keyframes revealRight {
+        0% { opacity: 0; transform: translateX(-20px); }
+        100% { opacity: 1; transform: translateX(0); }
+      }
+      
+      /* Multi-Axis Parallax Wave Scrolling (Strictly Horizontal) */
+      @keyframes waveScroll1 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-800px); }
+      }
+      @keyframes waveScroll2 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-600px); }
+      }
+      @keyframes waveScroll3 {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-500px); }
+      }
+
+      /* Synchronized Buoyancy Animations (Translation Y) */
+      @keyframes wordY {
+        0% { transform: translateY(-12px); }
+        100% { transform: translateY(12px); }
+      }
+      .word-y {
+        animation: wordY 3s cubic-bezier(0.364, 0, 0.636, 1) infinite alternate;
+      }
+
+      /* Synchronized Buoyancy Animations (Pitch Rotation) */
+      @keyframes wordPitch {
+        0% { transform: rotate(-8deg); }
+        100% { transform: rotate(8deg); }
+      }
+      .word-pitch {
+        animation: wordPitch 3s cubic-bezier(0.364, 0, 0.636, 1) infinite alternate;
+        /* Ensures rotation anchors to the exact center of the individual word's bounding box */
+        transform-origin: center;
+        transform-box: fill-box; 
+      }
+
+      /* Ship Dynamics */
+      @keyframes boatY {
+        0% { transform: translateY(-15px); }
+        100% { transform: translateY(15px); }
+      }
+      @keyframes boatPitch {
+        0% { transform: rotate(-6deg); }
+        100% { transform: rotate(6deg); }
+      }
+      .boat-y {
+        animation: boatY 6s cubic-bezier(0.364, 0, 0.636, 1) infinite alternate;
+      }
+      .boat-pitch {
+        animation: boatPitch 6s cubic-bezier(0.364, 0, 0.636, 1) infinite alternate;
+        animation-delay: -3s; 
+      }
+
+      /* Subtle Star Twinkle */
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 0.8; }
+      }
+
+      .text-reveal { animation: revealRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.25s; }
+      .delay-3 { animation-delay: 0.4s; }
+
+      .wave-slow { animation: waveScroll1 18s linear infinite; }
+      .wave-mid { animation: waveScroll2 12s linear infinite; }
+      .wave-fast { animation: waveScroll3 6s linear infinite; }
+    </style>
+
+    <linearGradient id="waveGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#020617" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="waveGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="1" />
+    </linearGradient>
+
+    <path id="wavePath1"
+      d="M 0 0 c 145 -32, 255 -32, 400 0 s 255 32, 400 0 c 145 -32, 255 -32, 400 0 s 255 32, 400 0 c 145 -32, 255 -32, 400 0 s 255 32, 400 0 v 140 h -2400 Z" />
+    <path id="wavePath2"
+      d="M 0 0 c 109 -20, 191 -20, 300 0 s 191 20, 300 0 c 109 -20, 191 -20, 300 0 s 191 20, 300 0 c 109 -20, 191 -20, 300 0 s 191 20, 300 0 v 110 h -1800 Z" />
+    <path id="wavePath3"
+      d="M 0 0 c 91 -16, 159 -16, 250 0 s 159 16, 250 0 c 91 -16, 159 -16, 250 0 s 159 16, 250 0 c 91 -16, 159 -16, 250 0 s 159 16, 250 0 c 91 -16, 159 -16, 250 0 s 159 16, 250 0 v 70 h -2000 Z" />
+  </defs>
+
+  <rect width="1000" height="280" fill="#020617" />
+
+  <g fill="#f8fafc">
+    <circle cx="200" cy="50" r="1.5" style="animation: twinkle 4s infinite;" />
+    <circle cx="450" cy="80" r="1" style="animation: twinkle 6s infinite 1s;" />
+    <circle cx="850" cy="40" r="2" style="animation: twinkle 5s infinite 2s;" />
+    <circle cx="720" cy="110" r="1.5" style="animation: twinkle 7s infinite 0.5s;" />
+    <circle cx="120" cy="140" r="1" style="animation: twinkle 5.5s infinite 1.5s;" />
+    <circle cx="600" cy="65" r="2" style="animation: twinkle 4.5s infinite 0.3s;" />
+    <circle cx="930" cy="120" r="1.5" style="animation: twinkle 6.5s infinite 2.5s;" />
+  </g>
+
+  <g transform="translate(80, 0)">
+    <text x="0" y="120"
+      font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      font-size="76" font-weight="900" fill="#f8fafc" letter-spacing="-3"
+      class="text-reveal delay-1"> aayush<tspan fill="#38bdf8">.</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(0, 140)" fill="url(#waveGrad1)">
+    <use href="#wavePath1" class="wave-slow" />
+  </g>
+  <g transform="translate(80, 0)">
+    <text x="4" y="162"
+      font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      font-size="18" font-weight="500" fill="#64748b" letter-spacing="0.5"
+      class="text-reveal delay-2"> Founder @ SpicyDevs <tspan fill="#334155" font-weight="300">|</tspan> <tspan
+        fill="#475569">Developing Posterium</tspan>
+    </text>
+  </g>
+  <g transform="translate(0, 175)" fill="url(#waveGrad2)">
+    <use href="#wavePath2" class="wave-mid" />
+  </g>
+
+  <g transform="translate(750, 175)">
+    <g class="boat-y">
+      <g class="boat-pitch">
+        <line x1="40" y1="5" x2="40" y2="-75" stroke="#475569" stroke-width="2" />
+        <polygon points="43,-10 43,-70 85,-10" fill="#38bdf8" />
+        <polygon points="37,-10 37,-60 5,-10" fill="#0ea5e9" />
+        <polygon points="0,5 95,5 80,25 15,25" fill="#cbd5e1" />
+        <polygon points="0,5 95,5 91,10 4,10" fill="#f8fafc" opacity="0.2" />
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(0, 215)" fill="#020617">
+    <use href="#wavePath3" class="wave-fast" />
+  </g>
+
+  <rect width="1000" height="280" fill="none" stroke="#1e293b" stroke-width="2" />
+
+  <g transform="translate(0, 215)">
+
+    <g transform="translate(90, 0)">
+      <g class="text-reveal delay-3">
+        <g class="word-y" style="animation-delay: -0.14s;">
+          <g class="word-pitch" style="animation-delay: -1.64s;">
+            <text x="0" y="-5"
+              font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+              font-size="14" font-weight="700" fill="#38bdf8" letter-spacing="2"
+              text-transform="uppercase">INNOVATE.</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <g transform="translate(240, 0)">
+      <g class="text-reveal delay-3">
+        <g class="word-y" style="animation-delay: -2.06s;">
+          <g class="word-pitch" style="animation-delay: -3.56s;">
+            <text x="0" y="-5"
+              font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+              font-size="14" font-weight="700" fill="#38bdf8" letter-spacing="2"
+              text-transform="uppercase">BRAINSTORM.</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <g transform="translate(420, 0)">
+      <g class="text-reveal delay-3">
+        <g class="word-y" style="animation-delay: -3.97s;">
+          <g class="word-pitch" style="animation-delay: -5.47s;">
+            <text x="0" y="-5"
+              font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+              font-size="14" font-weight="700" fill="#38bdf8" letter-spacing="2"
+              text-transform="uppercase">CREATE.</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+  </g>
+</svg>
