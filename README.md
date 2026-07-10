@@ -30,10 +30,20 @@ Currently building SpicyDevs, and Posterium, a movie and TV poster platform back
 
 architecture · distributed systems · compute infrastructure · API design · data consolidation · scraping
 
-### Stack
+## Tech Stack & Tools
 
-Node.js · TypeScript · MongoDB · Cloudflare Workers · VPS · Git
+**Languages** <br>
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,bash" />
 
----
+**Backend & Databases** <br>
+<img src="https://skillicons.dev/icons?i=nodejs,mongodb,mysql,sqlite,redis" />
 
-Find me: [Website](https://aayu.sh.gg) · [GitHub](#)
+**DevOps, Hosting & OS** <br>
+<img src="https://skillicons.dev/icons?i=ubuntu,linux,docker,git,github,vercel,cloudflare,workers,netlify,nginx" />
+
+**Tools & Design** <br>
+<img src="https://skillicons.dev/icons?i=vscode,npm,figma,discord,notion,obsidian" />
+
+<br/>
+
+Find me: [Website](https://aayu.sh.gg) · [GitHub](https://github.com/OpAayush)
